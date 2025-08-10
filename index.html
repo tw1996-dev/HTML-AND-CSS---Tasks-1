@@ -7,21 +7,27 @@
     <title>HTML and CSS Task 1 (Website 1 og 2)</title>
     <link rel="stylesheet" href="styles.css">
 
-
+    <script src="script.js" defer></script>
 
 </head>
 
 <body>
 
+    <div class="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
     <header>
         <h1>TOMEK</h1>
-        <nav>
+        <nav id="main-nav">
             <ul>
-                <li><a href="https://100kcalcost.com/" target="_blank">Home</a></li>
-                <li><a href="https://100kcalcost.com/" target="_blank">About</a></li>
-                <li><a href="https://100kcalcost.com/" target="_blank">Portfolio</a></li>
-                <li><a href="https://100kcalcost.com/" target="_blank">News</a></li>
-                <li><a href="https://100kcalcost.com/" target="_blank">Contact</a></li>
+                <li><a class="navigation-link" href="https://100kcalcost.com/" target="_blank">Home</a></li>
+                <li><a class="navigation-link" href="https://100kcalcost.com/" target="_blank">About</a></li>
+                <li><a class="navigation-link" href="https://100kcalcost.com/" target="_blank">Portfolio</a></li>
+                <li><a class="navigation-link" href="https://100kcalcost.com/" target="_blank">News</a></li>
+                <li><a class="navigation-link" href="https://100kcalcost.com/" target="_blank">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -29,18 +35,18 @@
     <main>
 
         <section class="aboutMe">
-            <img class="myPhoto" src="images\myPhoto.jpeg" alt="myImage">
-            <div class="aboutMe-content">
-                <h3 class="blue">ME</h3>
+            <img class="myPhoto" src="images/myPhoto_320px.webp"
+                srcset="images/myPhoto_320px.webp 320w, images/myPhoto_640px.webp 640w, images/myPhoto_960px.webp 960w, images/myPhoto_1200px.webp 1200w"
+                sizes="(max-width: 700px) 200px, 300px" alt="Photo of Tomasz Wojcik">
+            <aside class="aboutMe-content">
+                <h2 class="blue">ME</h2>
                 <p class="pStyle1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur vero, dolores
                     reprehenderit rerum laudantium ea nulla quod, odit consequuntur sapiente hic enim, minima fugiat
                     unde officiis quia aut distinctio dolorum Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Voluptates corrupti voluptate odit ut molestiae eveniet doloremque, consequatur, aliquam quam iusto,
                     illo ducimus sint nobis laudantium aliquid a commodi culpa ipsa.</p>
-                <a href="path/to/my-cv.pdf" download="Tomek_CV.pdf">
-                    <button type="button" class="cv-button">Download CV</button>
-                </a>
-            </div>
+                <button type="button" class="cv-button" onclick="window.open('path/to/my-cv.pdf')">Download CV</button>
+            </aside>
         </section>
 
         <div class="space"></div>
@@ -48,49 +54,76 @@
 
         <section class="selectedWorks">
             <h2>SELECTED <span class="blue">WORKS</span></h2>
-            <div>
-                <img src="" alt="Project 1" class="project-img">
-                <img src="" alt="Project 2" class="project-img">
-                <img src="" alt="Project 3" class="project-img">
-                <img src="" alt="Project 4" class="project-img">
-                <img src="" alt="Project 5" class="project-img">
-                <img src="" alt="Project 6" class="project-img">
+            <div class="grid-div">
+                <img src="images/im1_1200px.webp"
+                    srcset="images/im1_320px.webp 320w, images/im1_640px.webp 640w, images/im1_960px.webp 960w, images/im1_1200px.webp 1200w"
+                    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, (max-width: 1440px) 25vw, 400px"
+                    alt="Beautiful view from the balcony" class="project-img">
+
+                <img src="images/im2_1200px.webp"
+                    srcset="images/im2_320px.webp 320w, images/im2_640px.webp 640w, images/im2_960px.webp 960w, images/im2_1200px.webp 1200w"
+                    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, (max-width: 1440px) 25vw, 400px"
+                    alt="Rio - the sweetest dog in the world" class="project-img">
+
+                <img src="images/im3_1200px.webp"
+                    srcset="images/im3_320px.webp 320w, images/im3_640px.webp 640w, images/im3_960px.webp 960w, images/im3_1200px.webp 1200w"
+                    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, (max-width: 1440px) 25vw, 400px"
+                    alt="View of the river, bridge and sky" class="project-img">
+
+                <img src="images/im4_1200px.webp"
+                    srcset="images/im4_320px.webp 320w, images/im4_640px.webp 640w, images/im4_960px.webp 960w, images/im4_1200px.webp 1200w"
+                    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, (max-width: 1440px) 25vw, 400px"
+                    alt="Bus stop in rainy weather" class="project-img">
+
+                <img src="images/im5_1200px.webp"
+                    srcset="images/im5_320px.webp 320w, images/im5_640px.webp 640w, images/im5_960px.webp 960w, images/im5_1200px.webp 1200w"
+                    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, (max-width: 1440px) 25vw, 400px"
+                    alt="Beautiful view of the sea, part of the city and mountains" class="project-img">
+
+                <img src="images/im6_1200px.webp"
+                    srcset="images/im6_320px.webp 320w, images/im6_640px.webp 640w, images/im6_960px.webp 960w, images/im6_1200px.webp 1200w"
+                    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, (max-width: 1440px) 25vw, 400px"
+                    alt="Nature photography" class="project-img">
             </div>
         </section>
 
         <section class="skills">
+
             <div class="skills-text">
                 <h2>I have high skills in developing and programming</h2>
-                <p class="pStyle1">I was doing everything in my power to provide me with all the experiences to provide
+                <p class="pStyle1">I was doing everything in my power to provide me with all the experiences to
+                    provide
                     cost-effective
                     and
                     high quality products to satisfy my customers all over the world</p>
             </div>
-            <div class="skill-item">
-                <div class="skill-header">
-                    <p class="skill-name">Web Development</p>
-                    <span class="skill-percentage">95%</span>
+            <div class="skils-together">
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <p class="skill-name">Web Development</p>
+                        <span class="skill-percentage">95%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress"></div>
+                    </div>
                 </div>
-                <div class="skill-bar">
-                    <div class="skill-progress"></div>
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <p class="skill-name">Brand Identity</p>
+                        <span class="skill-percentage">80%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress"></div>
+                    </div>
                 </div>
-            </div>
-            <div class="skill-item">
-                <div class="skill-header">
-                    <p class="skill-name">Brand Identity</p>
-                    <span class="skill-percentage">80%</span>
-                </div>
-                <div class="skill-bar">
-                    <div class="skill-progress"></div>
-                </div>
-            </div>
-            <div class="skill-item">
-                <div class="skill-header">
-                    <p class="skill-name">Logo Design</p>
-                    <span class="skill-percentage">90%</span>
-                </div>
-                <div class="skill-bar">
-                    <div class="skill-progress"></div>
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <p class="skill-name">Logo Design</p>
+                        <span class="skill-percentage">90%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress"></div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -99,30 +132,42 @@
             <h2>LATEST <span class="blue">NEWS</span></h2>
             <div class="news-container">
                 <article class="news-item">
-                    <img src="" alt="News placeholder" class="news-image">
+                    <img src="images/im7_1200px.webp"
+                        srcset="images/im7_320px.webp 320w, images/im7_640px.webp 640w, images/im7_960px.webp 960w, images/im7_1200px.webp 1200w"
+                        sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, (max-width: 1440px) 25vw, 400px"
+                        alt="Business laptop and burnout symptoms" class="news-image">
                     <h3>Developers watch out for these burnout symptoms</h3>
-                    <p class="news-meta">
-                        <span class="news-author">BY <address>ALEX WATSON</address></span>
-                        <time class="news-date" datetime="2022-01-01">/ 01 JANUARY 2022</time>
-                    </p>
+                    <div class="news-div pStyle2">
+                        BY
+                        <address class="pStyle2">ALEX WATSON</address>
+                        <time class="pStyle2" datetime="2022-01-01">/ 01 JANUARY 2022</time>
+                    </div>
                 </article>
 
                 <article class="news-item">
-                    <img src="" alt="News placeholder" class="news-image">
+                    <img src="images/im8_1200px.webp"
+                        srcset="images/im8_320px.webp 320w, images/im8_640px.webp 640w, images/im8_960px.webp 960w, images/im8_1200px.webp 1200w"
+                        sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, (max-width: 1440px) 25vw, 400px"
+                        alt="Laptop for hard work appreciation" class="news-image">
                     <h3>How to be appreciated for your hard work as a developer</h3>
-                    <p class="news-meta">
-                        <span class="news-author">BY <address>BROOK KENNEDY</address></span>
-                        <time class="news-date" datetime="2021-12-22">/ 22 DECEMBER 2021</time>
-                    </p>
+                    <div class="news-div pStyle2">
+                        BY
+                        <address class="pStyle2">BROOK KENNEDY</address>
+                        <time class="pStyle2" datetime="2021-12-22">/ 22 DECEMBER 2021</time>
+                    </div>
                 </article>
 
                 <article class="news-item">
-                    <img src="" alt="News placeholder" class="news-image">
+                    <img src="images/im9_1200px.webp"
+                        srcset="images/im9_320px.webp 320w, images/im9_640px.webp 640w, images/im9_960px.webp 960w, images/im9_1200px.webp 1200w"
+                        sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, (max-width: 1440px) 25vw, 400px"
+                        alt="Business collaboration between designers and developers" class="news-image">
                     <h3>How designers and developers can collaborate better</h3>
-                    <p class="news-meta">
-                        <span class="news-author">BY <address>PAOLA ATKINS</address></span>
-                        <time class="news-date" datetime="2021-12-05">/ 05 DECEMBER 2021</time>
-                    </p>
+                    <div class="news-div pStyle2">
+                        BY
+                        <address class="pStyle2">PAOLA ATKINS</address>
+                        <time class="pStyle2" datetime="2021-05-12">/ 05 DECEMBER 2021</time>
+                    </div>
                 </article>
             </div>
         </section>
@@ -195,7 +240,32 @@
 
 
 
-    <footer></footer>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <h2>TOMEK</h2>
+            </div>
+
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/in/tomasz-w-a6886b213/" target="_blank" class="social-link">
+                    <img src="images/ik1.webp" alt="Social media icon 1" class="social-icon">
+                </a>
+                <a href="https://100kcalcost.com/" target="_blank" class="social-link">
+                    <img src="images/ik2.webp" alt="Social media icon 2" class="social-icon">
+                </a>
+                <a href="https://100kcalcost.com/" target="_blank" class="social-link">
+                    <img src="images/ik3.webp" alt="Social media icon 3" class="social-icon">
+                </a>
+                <a href="https://100kcalcost.com/" target="_blank" class="social-link">
+                    <img src="images/ik4.webp" alt="Social media icon 4" class="social-icon">
+                </a>
+            </div>
+
+            <div class="footer-copyright">
+                <small>© COPYRIGHT 2025 BY TOMEK</small>
+            </div>
+        </div>
+    </footer>
 
 </body>
 
