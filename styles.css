@@ -528,24 +528,51 @@ margin-top: 100px;
 
 
 
+/* FLOATING LABELS - FORM */
 .form-group {
-   margin-bottom: 20px;
+    position: relative;
+    margin-bottom: 25px;
 }
 
 .form-group input,
 .form-group textarea {
-   width: 100%;
-   padding: 15px;
-   border: 1px solid #ddd;
-   border-radius: 5px;
-   font-size: 16px;
-   font-family: inherit;
+    width: 100%;
+    padding: 15px 15px 15px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: inherit;
+    background: transparent;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form-group label {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    font-size: 16px;
+    color: #767676;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    background: white;
+    padding: 0 5px;
+}
+
+
+.form-group input:focus + label,
+.form-group input:valid + label,
+.form-group textarea:focus + label,
+.form-group textarea:valid + label {
+    top: -8px;
+    left: 10px;
+    font-size: 12px;
+    color: #4169e1;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
-   outline: none;
-   border-color: #4169e1;
+    border-color: #4169e1;
 }
 
 .submit-button {
@@ -690,6 +717,21 @@ footer {
 
 .social-link:hover .social-icon {
     opacity: 0.7;
+}
+
+.social-link:active .social-icon {
+    opacity: 0.5;
+    transform: scale(0.95);
+}
+
+.social-link:focus {
+    outline: 2px solid #4169e1;
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.social-link:focus .social-icon {
+    opacity: 0.8;
 }
 
 .footer-copyright small {

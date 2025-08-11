@@ -13,7 +13,7 @@
 
 <body>
 
-    <div class="hamburger-menu">
+    <div class="hamburger-menu" aria-label="Toggle navigation menu">
         <span></span>
         <span></span>
         <span></span>
@@ -21,7 +21,7 @@
 
     <header id="home">
         <h1>TOMEK</h1>
-        <nav id="main-nav">
+        <nav id="main-nav" aria-label="Main navigation">
             <ul>
                 <li><a class="navigation-link" href="#home">Home</a></li>
                 <li><a class="navigation-link" href="#about">About</a></li>
@@ -216,15 +216,18 @@
                 <div class="contact-form">
                     <form>
                         <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Name" required>
+                            <input type="text" id="name" name="name" required>
+                            <label for="name">Name</label>
                         </div>
 
                         <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Email" required>
+                            <input type="email" id="email" name="email" required>
+                            <label for="email">Email</label>
                         </div>
 
                         <div class="form-group">
-                            <textarea id="message" name="message" placeholder="Message" rows="5" required></textarea>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <label for="message">Message</label>
                         </div>
 
                         <button type="submit" class="submit-button">Send Message</button>
